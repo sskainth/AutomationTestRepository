@@ -1,0 +1,7 @@
+#default ignore files
+
+/shelf/
+/workspace.xml
+.idea/*
+testInterviewPrep.iml
+target/*
