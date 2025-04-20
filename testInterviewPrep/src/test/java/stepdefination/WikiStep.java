@@ -24,7 +24,7 @@ public void shareHolderValue(){
     @When("user etract the share holding value")
     public void ShareHoldingValue() {
         shareHolding=pageObjectManager.getWikiPage().getShareHoldingValue();
-      Assert.assertNotEquals("14.61%",shareHolding.get(0));
+      Assert.assertEquals("14.61%",shareHolding.get(0));
         System.out.println(shareHolding.get(0));
     }
 }
