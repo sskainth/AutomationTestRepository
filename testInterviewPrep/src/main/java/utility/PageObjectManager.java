@@ -3,6 +3,7 @@ package utility;
 import org.openqa.selenium.WebDriver;
 import pageObjects.FlipKartHomePage;
 import pageObjects.JQueryHomePage;
+import pageObjects.WikiPage;
 
 public class PageObjectManager {
     browser b = new browser();
@@ -19,6 +20,12 @@ public class PageObjectManager {
     public JQueryHomePage getJQueryHomePage(){
         JQueryHomePage jQueryHomePage = new JQueryHomePage(driver);
         return jQueryHomePage;
+    }
+
+
+    public WikiPage getWikiPage(){
+        WikiPage wikiPage = new WikiPage(driver);
+        return wikiPage;
     }
 
 }
