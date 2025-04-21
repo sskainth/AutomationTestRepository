@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utility.ExcelHandler;
 
 public class FlipKartHomePage {
     WebDriver driver;
@@ -17,4 +18,11 @@ public class FlipKartHomePage {
         driver.findElement(By.xpath("//input[@class='Pke_EE']")).sendKeys(product);
         driver.findElement(By.xpath("//input[@class='Pke_EE']")).click();
     }
+
+    public void searchProduct(String sheet,int row,int column){
+        String product = ExcelHandler.readData(sheet,row,column);
+        driver.findElement(By.xpath("//input[@class='Pke_EE']")).sendKeys(product);
+        driver.findElement(By.xpath("//input[@class='Pke_EE']")).click();
+    }
+
 }
