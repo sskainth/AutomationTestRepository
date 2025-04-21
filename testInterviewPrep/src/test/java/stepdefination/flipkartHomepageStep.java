@@ -26,4 +26,9 @@ public class flipkartHomepageStep {
     @Then("verify the search the page")
     public void verifyTheSearchThePage() {
     }
+
+    @When("user enter the goods for search from file {string}")
+    public void userEnterTheGoodsForSearchFromFile(String sheet) {
+        pageObjectManager.getFlipKartHomepage().searchProduct(sheet,1,0);
+    }
 }
