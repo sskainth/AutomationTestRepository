@@ -9,9 +9,9 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         features = {"src/test/resources/testdesigen"},
-        glue = {"stepdefination"},
-        tags = "@test1",
-        plugin = {"pretty"}
+        glue = {"stepdefination","hooks"},
+        tags = "@test",
+        plugin = {"pretty","html:target/test-results/report.html"}
 )
 
 public class Runner {

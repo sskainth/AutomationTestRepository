@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="14.835" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-22T20:57:41.959533600Z">
+<testcase classname="trying flipkart for learning" name="search functionality for learning" time="14.461">
+<system-out><![CDATA[
+When user enter the goods for search "tablet"...............................passed
+And search the product......................................................passed
+Then verify the search the page.............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
