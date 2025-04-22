@@ -1,15 +1,15 @@
 package utility;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.FlipKartHomePage;
-import pageObjects.JQueryHomePage;
-import pageObjects.WikiPage;
+import pageObjects.*;
 
 public class PageObjectManager {
-    browser b = new browser();
+    public browser base;
     private WebDriver driver;
     public PageObjectManager(){
-        this.driver = b.driverInvocation();
+
+        base = new browser();
+        this.driver = base.driverInvocation();
     }
 
     public FlipKartHomePage getFlipKartHomepage(){
@@ -27,5 +27,17 @@ public class PageObjectManager {
         WikiPage wikiPage = new WikiPage(driver);
         return wikiPage;
     }
+
+
+    public AmazonHomePage getAmazonHomePage(){
+        AmazonHomePage amazonHomePage = new AmazonHomePage(driver);
+        return amazonHomePage;
+    }
+
+    public BabyWishListPage getBabyWishListPage(){
+        BabyWishListPage babyWishListPage = new BabyWishListPage(driver);
+        return babyWishListPage;
+    }
+
 
 }
