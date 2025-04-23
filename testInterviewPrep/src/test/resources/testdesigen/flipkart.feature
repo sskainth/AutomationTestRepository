@@ -1,13 +1,11 @@
 Feature: trying flipkart for learning
 
   @test
-Scenario: search functionality for learning
-     #beforestep
-  When user enter the goods for search "tablet"
-  #afterstep
+Scenario: search functionality for learning flipkart
+  When user enter the goods for search "iPhone"
   And search the product
-  #afterstep
   Then verify the search the page
+
 
 
   @test1
