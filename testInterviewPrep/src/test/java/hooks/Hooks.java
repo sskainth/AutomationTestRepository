@@ -25,13 +25,22 @@ public class Hooks {
     }
 
     @BeforeStep()
+    public void precondition(Scenario sc){
+        try {
+            TakesScreenshot sshot = (TakesScreenshot) pageObjectManager.base.driverInvocation();
+            // System.out.println(pageObjectManager.base.driverInvocation().getCurrentUrl());
+            byte[] bytedata = sshot.getScreenshotAs(OutputType.BYTES);
+
+            sc.attach(bytedata, "image/png", "step shot");
+        } catch (Exception e) {
+            System.out.println("screen shot nahi attach hua"+e.getMessage());
+            throw new RuntimeException(e);
+        }
+        System.out.println("@BeforeStep");
+    }
 
     @AfterStep()
-    public void takeScreenshot(Scenario sc) {
-
-        TakesScreenshot ts = (TakesScreenshot) pageObjectManager.base.driverInvocation();
-        byte[] bytedate = ts.getScreenshotAs(OutputType.BYTES);
-        sc.attach(bytedate, "image/png", sc.getName());
+    public void Screensho() {
 
 
     }
