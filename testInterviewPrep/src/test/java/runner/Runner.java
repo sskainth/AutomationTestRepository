@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         features = {"src/test/resources/testdesigen"},
-        glue = {"stepdefination","hooks"},
+        glue = {"stepdefination"},
         tags = "@babywishlist",
         plugin = {"pretty","html:target/test-results/report.html"}
 )
